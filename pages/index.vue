@@ -11,3 +11,11 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss">
+  section {
+    h1 {
+      font-weight: 800;
+    }
+  }
+</style>
