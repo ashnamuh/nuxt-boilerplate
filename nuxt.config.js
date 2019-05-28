@@ -1,4 +1,5 @@
 import ConfigWebpackPlugin from 'config-webpack'
+import StyleLintPlugin from 'stylelint-webpack-plugin'
 import config from 'config'
 
 export default {
@@ -68,6 +69,9 @@ export default {
   build: {
     extractCSS: process.env.NODE_ENV === 'production',
     plugins: [
+      new StyleLintPlugin({
+        files: ['**/*.vue']
+      }),
       new ConfigWebpackPlugin()
     ],
     /*

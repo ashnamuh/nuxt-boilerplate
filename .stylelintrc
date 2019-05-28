@@ -1,0 +1,22 @@
+{
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "function-url-quotes": "never",
+    "order/properties-order": [
+      "display",
+      "overflow",
+      "float",
+      "position",
+      "z-index",
+      "width",
+      "height",
+      "margin",
+      "padding",
+      "border",
+      "font",
+      "background"
+    ]
+  }
+}
