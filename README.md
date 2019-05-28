@@ -1,8 +1,10 @@
 # nuxt-boilerplate
 
-> My luminous Nuxt.js project
+> Nuxt.js boilerplate for ashnamuh
 
 ## Build Setup
+
+clone or download ZIP the project
 
 ``` bash
 # install dependencies
