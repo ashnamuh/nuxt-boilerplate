@@ -1,6 +1,5 @@
-import ConfigWebpackPlugin from 'config-webpack'
 import StyleLintPlugin from 'stylelint-webpack-plugin'
-import config from 'config'
+import config from './config'
 
 export default {
   mode: 'universal',
@@ -71,8 +70,7 @@ export default {
     plugins: [
       new StyleLintPlugin({
         files: ['**/*.vue']
-      }),
-      new ConfigWebpackPlugin()
+      })
     ],
     /*
     ** You can extend webpack config here
