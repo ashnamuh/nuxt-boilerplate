@@ -9,7 +9,8 @@
   </a>
   <nuxt-link
     v-else
-    :class="[className, (isActive) ? activeClassName : undefined]"
+    :class="[className]"
+    :active-class="activeClassName"
     :to="path"
   >
     <slot />
@@ -41,12 +42,6 @@ export default {
     }
   },
   computed: {
-    isActive() {
-      if (this.$route.path === this.path) {
-        return true
-      }
-      return false
-    }
   }
 }
 </script>
