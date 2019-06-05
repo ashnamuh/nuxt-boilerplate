@@ -1,0 +1,32 @@
+{
+  "eslint.autoFixOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    {
+      "language": "javascriptreact",
+      "autoFix": true
+    },
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    },
+  ],
+  "editor.renderWhitespace": "all",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": false,
+  "search.exclude": {
+    ".nuxt": true
+  },
+}
