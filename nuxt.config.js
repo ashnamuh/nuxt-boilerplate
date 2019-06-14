@@ -1,11 +1,14 @@
-import StyleLintPlugin from 'stylelint-webpack-plugin'
-import config from './config'
+/* eslint nuxt/no-cjs-in-config: 0 */
+const StyleLintPlugin = require('stylelint-webpack-plugin')
+const { config } = require('./config')
 
-export default {
+module.exports = {
   mode: 'universal',
-  server: {
-    port: config.server.port,
-    host: config.server.host
+  performance: {
+    gzip: false
+  },
+  router: {
+    base: config.server.baseUrl
   },
   /*
   ** Headers of the page
