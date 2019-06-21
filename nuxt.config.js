@@ -72,9 +72,6 @@ module.exports = {
   build: {
     extractCSS: process.env.NODE_ENV === 'production',
     plugins: [
-      new StyleLintPlugin({
-        files: ['**/*.vue']
-      })
     ],
     /*
     ** You can extend webpack config here
@@ -82,6 +79,12 @@ module.exports = {
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
+        config.plugins.push(new StyleLintPlugin({
+          files: [
+            '**/*.vue',
+            '**/*.scss'
+          ]
+        }))
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
