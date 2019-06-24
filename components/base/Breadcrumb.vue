@@ -1,5 +1,5 @@
 <template>
-  <div :class="className">
+  <div>
     <button v-for="item in items" :key="item.name" :class="{ selected: item.name === selected }" @click="select(item.name)">
       {{ item.showName }}
     </button>
@@ -22,11 +22,6 @@ export default {
       type: String,
       required: false,
       default: null
-    },
-    className: {
-      type: String,
-      required: false,
-      default: undefined
     }
   },
   data() {

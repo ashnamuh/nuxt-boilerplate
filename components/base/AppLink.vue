@@ -1,7 +1,6 @@
 <template>
   <a
     v-if="isNewWindow"
-    :class="[className]"
     :href="path"
     target="_blank"
   >
@@ -9,7 +8,6 @@
   </a>
   <nuxt-link
     v-else
-    :class="[className]"
     :active-class="activeClassName"
     :to="path"
   >
@@ -34,17 +32,9 @@ export default {
       type: Boolean,
       required: false,
       default: false
-    },
-    className: {
-      type: String,
-      required: false,
-      default: undefined
     }
   },
   computed: {
   }
 }
 </script>
-
-<style scoped lang="scss">
-</style>
