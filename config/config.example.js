@@ -6,7 +6,7 @@ const serverless = {
 
 const server = {
   port: 3002,
-  baseUrl: `/${serverless.stage}/`
+  baseUrl: (process.env.NODE_ENV === 'production') ? `/${serverless.stage}/` : '/'
 }
 
 const api = {
