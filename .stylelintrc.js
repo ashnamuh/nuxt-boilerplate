@@ -13,6 +13,7 @@ module.exports = {
     'block-opening-brace-newline-after': 'always',
     'declaration-colon-space-after': 'always',
     'declaration-colon-space-before': 'never',
+    'block-opening-brace-space-before': 'always',
     'indentation': 2,
     'order/properties-order': [
       'display',
