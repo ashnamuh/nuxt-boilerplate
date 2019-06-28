@@ -16,6 +16,11 @@ module.exports = {
   // add your custom rules here
   rules: {
     'no-console': offOnDev,
+    'prefer-arrow-callback': 'error',
+    'arrow-body-style': ['error', 'as-needed'],
+    'object-shorthand': ['error', 'always'],
+    'func-style': ['error', 'declaration', { 'allowArrowFunctions': true }],
+    'vue/attribute-hyphenation': ['error', 'never'],
     'vue/order-in-components': ['error', {
       'order': [
         'el',
