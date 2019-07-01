@@ -83,7 +83,8 @@ module.exports = {
           files: [
             '**/*.vue',
             '**/*.scss'
-          ]
+          ],
+          syntax: 'scss'
         }))
         config.module.rules.push({
           enforce: 'pre',
