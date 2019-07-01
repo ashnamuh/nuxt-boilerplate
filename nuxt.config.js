@@ -42,7 +42,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~/assets/styles/reset.scss'
+    '~/assets/styles/_reset.scss'
   ],
 
   /*
