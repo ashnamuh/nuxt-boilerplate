@@ -4,9 +4,11 @@
     :class="[
       'button-' + type,
       size ? 'button-' + type + '--' + size : '',
-      plain ? 'button-' + type + '--' + 'plain' : '',
-      disabled ? 'button-' + type + '--' + 'disabled' : '',
-      round ? 'button-' + type + '--' + 'round' : ''
+      {
+        'is-round': round,
+        'is-disabled': disabled,
+        'is-plain': plain
+      }
     ]"
   >
     <slot />
@@ -77,15 +79,18 @@ $black: #000000;
     &--disabled {
       background-color: mix($white, $color, 50%);
     }
-    &--round {
+    @at-root &.is-round {
       border-radius: 20px;
     }
-    &--plain {
+    @at-root &.is-plain {
       background-color: mix($white, $color, 90%);
       @if ($color!=$white) {
         color: $color;
         border-color: $color;
       }
+    }
+    @at-root &.is-disabled {
+      background-color: mix($white, $color, 50%);
     }
     &--medium {
       font-size: 14px;
@@ -98,10 +103,17 @@ $black: #000000;
   }
 }
 
-@include button(default, #ffffff);
-@include button(primary, #409eff);
-@include button(success, #67c23a);
-@include button(info, #909399);
-@include button(warning, #e6a23c);
-@include button(danger, #f56c6c);
+$color-default: #ffffff;
+$color-primary: #409eff;
+$color-success: #67c23a;
+$color-info: #909399;
+$color-warning: #e6a23c;
+$color-danger: #f56c6c;
+
+@include button(default, $color-default);
+@include button(primary, $color-primary);
+@include button(success, $color-success);
+@include button(info, $color-info);
+@include button(warning, $color-warning);
+@include button(danger, $color-danger);
 </style>
