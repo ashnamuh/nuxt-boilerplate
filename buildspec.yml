@@ -14,6 +14,3 @@ phases:
   build:
     commands:
       - npm run generate
-  post_build:
-    commands:
-      - aws s3 sync ./build $S3_BUCKET
