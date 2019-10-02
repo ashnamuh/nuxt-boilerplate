@@ -7,7 +7,6 @@ phases:
     commands:
       - npm i npm@latest -g
       - pip install --upgrade pip
-      - pip install --upgrade awscli
   pre_build:
     commands:
       - npm install
@@ -16,4 +15,5 @@ phases:
       - npm run generate
   post_build:
     commands:
-      - aws s3 sync ./dist $S3_BUCKET
+      - ls -la
+      - aws s3 sync ./dist s3://$S3_BUCKET
